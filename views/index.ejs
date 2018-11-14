@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <meta charset="utf-8">
+  	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
+
+
+    <%- title %>
+    <a target="_blank" href="./get_info">节点信息</a>
+    <br/>
+
+    <a target="_blank" href="./create_key">创建密钥对</a>
+    <br/>
+   <p>
+    	获取区块信息<br/><br/>
+    	<form action="./getBlock" method="get">
+    	
+    	区块id :<input name="id" value="" type="text" placeholder="请输入区块id或区块高度"><br/>
+    	
+        <input type="submit" value="提交"><br/>
+        
+    	</form>
+    <p>
+    <br/>
+    <p>
+        购买RAM<br/><br/>
+        <form action="./buyRam" method="get">
+        购买账号:<input name="account" value="" type="text" placeholder="请输入您的账号"><br/>
+        为谁购买:<input name="receiver" value="" type="text" placeholder="为谁购买内存"><br/>
+        购买内存字节：<input name="bytes" value="" type="text" placeholder="购买内存字节"><br/>
+        <input type="submit" value="提交"><br/>
+        </form>
+    <p>
+    <p>
+        出售RAM<br/><br/>
+        <form action="./sellRam" method="get">
+        出售账号:<input name="account" value="" type="text" placeholder="请输入您的账号"><br/>
+        出售内存字节：<input name="bytes" value="" type="text" placeholder="出售内存"><br/>
+        <input type="submit" value="提交"><br/>
+        </form>
+    <p>
+    <br/>
+     <p>
+    	创建账户<br/>
+    	<form action="./newAccount" method="get">
+    	  你的账户：<input name="creator" value="" type="text" placeholder="请输入你的账户名"><br/>
+        账户名 :<input name="name" value="" type="text" placeholder="请输入账户名"><br/>
+        新建账户公钥：<input name="owner" value="" type="text" placeholder="请输入新建账户公钥"><br/>
+    	  <input type="submit" value="提交">
+    	</form>
+    <p>
+    <br/>
+
+    <p>
+    	查询账号权限、资源等信息<br/>
+    	<form action="./getAccount" method="get">
+    	
+    	账户名 :<input name="name" value="" type="text" placeholder="请输入账户"><br/>
+    
+    	<input type="submit" value="提交">
+    	</form>
+    <p>
+    <p>
+      获取账户余额<br/>
+      <form action="./getBalance" method="get">
+      
+      账户名 :<input name="name" value="" type="text" placeholder="请输入账户"><br/>
+      合约账户 :<input name="code" value="" type="text" placeholder="请输入合约账户"><br/>
+    
+      <input type="submit" value="提交">
+      </form>
+    <p>
+    <p>
+      领回解除抵押的EOS<br/>
+      <form action="./getRefund" method="get">
+        账户名 :<input name="name" value="" type="text" placeholder="请输入账户"><br/>
+        接收者 :<input name="receiver" value="" type="text" placeholder="请输入接收者"><br/>
+        NET :<input name="net" value="" type="text" placeholder="请输入赎回NET">EOS<br/>
+        CPU :<input name="cpu" value="" type="text" placeholder="请输入赎回CPU">EOS<br/>
+      <input type="submit" value="提交">
+      </form>
+    <p>
+
+    <p>
+      抵押NET CPU<br/>
+      <form action="./getMortgage" method="get">
+        账户名 :<input name="name" value="" type="text" placeholder="请输入账户"><br/>
+        接收者 :<input name="receiver" value="" type="text" placeholder="请输入接收者"><br/>
+        NET :<input name="net" value="" type="text" placeholder="请输入抵押NET">EOS<br/>
+        CPU :<input name="cpu" value="" type="text" placeholder="请输入抵押CPU">EOS<br/>
+        <input type="submit" value="提交">
+      </form>
+    </p>
+
+    <p>
+      转账<br/>
+      <form action="./getTransfer" method="get">
+        账户名 :<input name="name" value="" type="text" placeholder="请输入账户名"><br/>
+        对方账户 :<input name="receiver" value="" type="text" placeholder="请输入对方账户名"><br/>
+        金额 :<input name="amount" value="" type="text" placeholder="请输入转账金额">EOS<br/>
+        备注 :<input name="memo" value="" type="text" placeholder="请输入备注">EOS<br/>
+        <input type="submit" value="提交">
+      </form>
+    </p>
+
+  </body>
+</html>
+
